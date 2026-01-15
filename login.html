@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #7e7c17, #7d971e);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 30px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: #b11515;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #802429;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #41972f;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot-password a {
+            text-decoration: none;
+            color: #56a02c;
+            font-size: 14px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        #msg {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login BROOO</h2>
+        <form id="profileForm">
+            <div class="input-group">
+                <label for="email">EMAIL</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="name">Password</label>
+                <input type="password" id="name" name="password" required>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <div id="msg"></div>
+
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $("#profileForm").submit(function(e){
+            e.preventDefault();
+
+            var userName = $("#name").val();
+            var userEmail = $("#email").val();
+
+            if(userName !== "" && userEmail !== ""){
+                $("#msg").text("Form submitted successfully!");
+            } else {
+                $("#msg").text("Please fill all fields").css("color", "red");
+            }
+        });
+    </script>
+
+</body>
+</html>
