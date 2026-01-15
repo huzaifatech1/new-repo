@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information</title>
+</head>
+<body>
+
+<h2>Employee Details</h2>
+
+<p id="info"></p>
+
+<script>
+    var empId = 101;
+    var empName = "NOORAIN AHMED";
+    var empAge = "15";
+    var empGender = "Male";
+    var empDepartment = "IT";
+    var empDesignation = "Software Engineer";
+    var empSalary = 25000;
+    var empLocation = "KARACHI";
+
+    
+    document.getElementById("info").innerHTML =
+        "Employee ID: " + empId + "<br>" +
+        "Name: " + empName + "<br>" +
+        "Age: " + empAge + "<br>" +
+        "Gender: " + empGender + "<br>" +
+        "Department: " + empDepartment + "<br>" +
+        "Designation: " + empDesignation + "<br>" +
+        "Salary: ₹" + empSalary + "<br>" +
+        "Location: " + empLocation;
+</script>
+
+</body>
+</html>
